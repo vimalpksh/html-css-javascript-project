@@ -3,3 +3,78 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#0093e9, #80d0c7);
+}
+
+.card {
+  width: 30rem;
+  height: 35rem;
+  position: relative;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.card:hover::before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgCont {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  z-index: 2;
+  transition: all 1s;
+}
+
+.card:hover .imgCont {
+  bottom: 80px;
+  transition: all 1s;
+}
+
+.details {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  height: 50px;
+  transition: all 1s;
+}
