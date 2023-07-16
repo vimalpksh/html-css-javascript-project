@@ -7,5 +7,5 @@ window.addEventListener("scroll", scroll);
 function scroll() {
   let scrollTop = document.documentElement.scrollTop;
   let scrolled = (scrollTop / scrollHeight) * 100;
-  indicator.computedStyleMap.width = `${scrolled}%`;
+  indicator.style.width = `${scrolled}%`;
 }
