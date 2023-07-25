@@ -1,0 +1,24 @@
+:root {
+  --primary-color: white;
+  --primary-label: black;
+  --secondary-label: white;
+  --white-ball: white;
+  --black-ball: black;
+}
+
+body {
+  background: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#switch {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+label {
+}
